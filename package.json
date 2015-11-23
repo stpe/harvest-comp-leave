@@ -1,0 +1,27 @@
+{
+  "name": "harvest-comp-leave",
+  "version": "1.0.0",
+  "description": "Get relevant data from Harvest",
+  "main": "app/app.js",
+  "scripts": {
+    "test": "jshint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stpe/harvest-comp-leave.git"
+  },
+  "author": "Stefan Pettersson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stpe/harvest-comp-leave/issues"
+  },
+  "homepage": "https://github.com/stpe/harvest-comp-leave#readme",
+  "dependencies": {
+    "bluebird": "3.0.5",
+    "dotenv": "1.2.0",
+    "es6-promise": "3.0.2",
+    "es6-promisify": "3.0.0",
+    "harvest": "0.1.3",
+    "moment": "2.10.6"
+  }
+}
