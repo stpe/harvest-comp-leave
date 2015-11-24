@@ -147,7 +147,10 @@ peopleList({})
 
         console.log("Response HTTP Status", res.statusCode);
         res.on('data', chunk => reply += chunk);
-        res.on('end', chunk => console.log(reply));
+        res.on('end', chunk => {
+          console.log(reply);
+          process.exit();
+        });
       });
     });
   });
