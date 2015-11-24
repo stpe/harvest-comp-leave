@@ -4,7 +4,7 @@
 const TASK_ID_COMP_LEAVE = 4136105;
 const PROJECT_ID_INTERNAL = 7778502;
 
-require("dotenv").load();
+require("dotenv").load({silent: true});
 var _ = require("lodash");
 
 // moment
