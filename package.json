@@ -4,7 +4,8 @@
   "description": "Get relevant data from Harvest",
   "main": "app/app.js",
   "scripts": {
-    "test": "jshint ."
+    "start": "node app/app.js",
+    "test": "jshint app"
   },
   "repository": {
     "type": "git",
