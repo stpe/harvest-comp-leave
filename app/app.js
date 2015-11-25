@@ -76,7 +76,7 @@ peopleList({})
     return timeEntriesByProject(reportOptions);
   })
   .then(function(data) {
-    data.filter(entry => entry.day_entry.task_id === TASK_ID_COMP_LEAVE)
+    data.filter(entry => entry.day_entry.task_id == TASK_ID_COMP_LEAVE)
       .map(function(entry) {
         entry = entry.day_entry;
 
