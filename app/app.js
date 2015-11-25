@@ -1,9 +1,6 @@
 /* jshint node: true, esnext: true */
 "use strict";
 
-const TASK_ID_COMP_LEAVE = 4136105;
-const PROJECT_ID_INTERNAL = 7778502;
-
 require("dotenv").load({silent: true});
 var _ = require("lodash");
 
@@ -37,9 +34,12 @@ var s3 = knox.createClient({
   region: process.env.S3_REGION
 });
 
+const TASK_ID_COMP_LEAVE = process.env.TASK_ID_COMP_LEAVE;
+const PROJECT_ID_INTERNAL = process.env.PROJECT_ID_INTERNAL;
+
 var reportOptions = {
   project_id: PROJECT_ID_INTERNAL,
-  from: moment().subtract(1, "weeks").startOf("week").format("YYYYMMDD"),
+  from: moment().subtract(process.env.NUMBER_OF_WEEKS, "weeks").startOf("week").format("YYYYMMDD"),
   to: moment().endOf("week").format("YYYYMMDD")
 };
 
