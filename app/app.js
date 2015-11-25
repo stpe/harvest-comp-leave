@@ -37,6 +37,9 @@ var s3 = knox.createClient({
 const TASK_ID_COMP_LEAVE = process.env.TASK_ID_COMP_LEAVE;
 const PROJECT_ID_INTERNAL = process.env.PROJECT_ID_INTERNAL;
 
+console.log("Project ID: " + TASK_ID_COMP_LEAVE);
+console.log("Task ID: " + PROJECT_ID_INTERNAL);
+
 var reportOptions = {
   project_id: PROJECT_ID_INTERNAL,
   from: moment().subtract(process.env.NUMBER_OF_WEEKS, "weeks").startOf("week").format("YYYYMMDD"),
@@ -138,6 +141,9 @@ peopleList({})
       if (err) {
         return console.error(err);
       }
+
+      console.log("-- CSV: --");
+      console.log(csv);
 
       var buffer = new Buffer(csv);
       var headers = { 'Content-Type': 'text/plain' };
