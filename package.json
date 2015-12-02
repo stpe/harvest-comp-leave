@@ -5,7 +5,8 @@
   "main": "app/app.js",
   "scripts": {
     "start": "node app/app.js",
-    "test": "jshint app"
+    "test": "mocha test",
+    "pretest": "jshint app"
   },
   "repository": {
     "type": "git",
@@ -25,5 +26,8 @@
     "knox": "0.9.2",
     "lodash": "3.10.1",
     "moment": "2.10.6"
+  },
+  "devDependencies": {
+    "mocha": "2.3.4"
   }
 }

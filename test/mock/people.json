@@ -1,0 +1,462 @@
+[
+  {
+    "user": {
+      "id": 1033335,
+      "email": "anton@rebel-and-bird.com",
+      "created_at": "2015-06-26T07:50:50Z",
+      "is_admin": false,
+      "first_name": "Anton",
+      "last_name": "Warnhag",
+      "timezone": "Stockholm",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": false,
+      "updated_at": "2015-11-24T08:29:51Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 995312,
+      "email": "axel@rebel-and-bird.com",
+      "created_at": "2015-05-08T06:50:07Z",
+      "is_admin": false,
+      "first_name": "Axel",
+      "last_name": "Hammarbäck",
+      "timezone": "Stockholm",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": false,
+      "updated_at": "2015-11-20T12:26:33Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 985213,
+      "email": "benjamin@rebel-and-bird.com",
+      "created_at": "2015-04-27T07:37:40Z",
+      "is_admin": true,
+      "first_name": "Benjamin",
+      "last_name": "Glaser",
+      "timezone": "Amsterdam",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": true,
+      "updated_at": "2015-10-27T10:21:34Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 991256,
+      "email": "carl@benson.guru",
+      "created_at": "2015-05-04T13:04:08Z",
+      "is_admin": false,
+      "first_name": "Carl",
+      "last_name": "Benson",
+      "timezone": "Amsterdam",
+      "is_contractor": true,
+      "telephone": "",
+      "is_active": false,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 1200,
+      "department": "",
+      "wants_newsletter": false,
+      "updated_at": "2015-06-26T07:36:54Z",
+      "cost_rate": 800
+    }
+  },
+  {
+    "user": {
+      "id": 985513,
+      "email": "christian@machbros.se",
+      "created_at": "2015-04-27T14:39:02Z",
+      "is_admin": false,
+      "first_name": "Christian",
+      "last_name": "Fernandes",
+      "timezone": "Stockholm",
+      "is_contractor": true,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 1150,
+      "department": "",
+      "wants_newsletter": false,
+      "updated_at": "2015-11-19T14:19:36Z",
+      "cost_rate": 900
+    }
+  },
+  {
+    "user": {
+      "id": 1002112,
+      "email": "david@rebel-and-bird.com",
+      "created_at": "2015-05-18T13:42:52Z",
+      "is_admin": false,
+      "first_name": "David",
+      "last_name": "Stypulkowski",
+      "timezone": "Stockholm",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": true,
+      "updated_at": "2015-11-09T14:49:58Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 1090074,
+      "email": "info@rebel-and-bird.com",
+      "created_at": "2015-09-07T08:11:53Z",
+      "is_admin": false,
+      "first_name": "Extern",
+      "last_name": "Konsult",
+      "timezone": "Amsterdam",
+      "is_contractor": true,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": false,
+      "updated_at": "2015-10-23T09:56:44Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 985216,
+      "email": "hanna@rebel-and-bird.com",
+      "created_at": "2015-04-27T07:41:22Z",
+      "is_admin": false,
+      "first_name": "Hanna",
+      "last_name": "Pettersson",
+      "timezone": "Amsterdam",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": true,
+      "updated_at": "2015-11-20T14:55:39Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 993398,
+      "email": "jacob.broms@prototyp.se",
+      "created_at": "2015-05-06T08:39:17Z",
+      "is_admin": false,
+      "first_name": "Jacob",
+      "last_name": "Broms Engblom",
+      "timezone": "Amsterdam",
+      "is_contractor": true,
+      "telephone": "",
+      "is_active": false,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 1150,
+      "department": "",
+      "wants_newsletter": false,
+      "updated_at": "2015-06-26T07:32:40Z",
+      "cost_rate": 850
+    }
+  },
+  {
+    "user": {
+      "id": 972272,
+      "email": "josefine@rebel-and-bird.com",
+      "created_at": "2015-04-09T13:09:11Z",
+      "is_admin": true,
+      "first_name": "Josefine",
+      "last_name": "Granding Larsson",
+      "timezone": "Amsterdam",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": true,
+      "updated_at": "2015-10-06T12:09:17Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 1007596,
+      "email": "julia_gerhardsen@hotmail.com",
+      "created_at": "2015-05-26T07:38:45Z",
+      "is_admin": false,
+      "first_name": "Julia",
+      "last_name": "Gerhardsen",
+      "timezone": "Stockholm",
+      "is_contractor": true,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": false,
+      "updated_at": "2015-10-27T10:21:35Z",
+      "cost_rate": 120
+    }
+  },
+  {
+    "user": {
+      "id": 1063317,
+      "email": "lisaenckell@gmail.com",
+      "created_at": "2015-08-04T11:22:57Z",
+      "is_admin": false,
+      "first_name": "Lisa",
+      "last_name": "Enckell",
+      "timezone": "Amsterdam",
+      "is_contractor": true,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 1250,
+      "department": "",
+      "wants_newsletter": true,
+      "updated_at": "2015-11-24T18:36:42Z",
+      "cost_rate": 1100
+    }
+  },
+  {
+    "user": {
+      "id": 1033338,
+      "email": "magnus@rebel-and-bird.com",
+      "created_at": "2015-06-26T07:55:16Z",
+      "is_admin": false,
+      "first_name": "Magnus",
+      "last_name": "Enqvist",
+      "timezone": "Amsterdam",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": true,
+      "updated_at": "2015-11-23T14:58:22Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 1033337,
+      "email": "malin@rebel-and-bird.com",
+      "created_at": "2015-06-26T07:54:18Z",
+      "is_admin": false,
+      "first_name": "Malin",
+      "last_name": "Larsson",
+      "timezone": "Amsterdam",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": true,
+      "updated_at": "2015-10-30T15:21:09Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 985220,
+      "email": "mikael@rebel-and-bird.com",
+      "created_at": "2015-04-27T07:43:52Z",
+      "is_admin": true,
+      "first_name": "Mikael",
+      "last_name": "Jansson",
+      "timezone": "Stockholm",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": false,
+      "updated_at": "2015-11-17T10:25:03Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 994426,
+      "email": "josefine@granding.se",
+      "created_at": "2015-05-07T07:55:42Z",
+      "is_admin": false,
+      "first_name": "NodeOne",
+      "last_name": "NodeOne",
+      "timezone": "Amsterdam",
+      "is_contractor": true,
+      "telephone": "",
+      "is_active": false,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 1000,
+      "department": "",
+      "wants_newsletter": false,
+      "updated_at": "2015-05-07T08:02:59Z",
+      "cost_rate": 900
+    }
+  },
+  {
+    "user": {
+      "id": 1120374,
+      "email": "dev@accounting.pe",
+      "created_at": "2015-10-14T12:43:13Z",
+      "is_admin": true,
+      "first_name": "PE",
+      "last_name": "Accounting",
+      "timezone": "Stockholm",
+      "is_contractor": true,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": false,
+      "updated_at": "2015-11-20T09:39:46Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 995311,
+      "email": "pelle@rebel-and-bird.com",
+      "created_at": "2015-05-08T06:49:05Z",
+      "is_admin": false,
+      "first_name": "Pelle",
+      "last_name": "Sten",
+      "timezone": "Amsterdam",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": true,
+      "updated_at": "2015-11-20T12:31:08Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 982099,
+      "email": "peter@rebel-and-bird.com",
+      "created_at": "2015-04-22T07:31:51Z",
+      "is_admin": true,
+      "first_name": "Peter",
+      "last_name": "Blom",
+      "timezone": "Amsterdam",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": false,
+      "updated_at": "2015-11-04T08:47:48Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 985218,
+      "email": "sandra@rebel-and-bird.com",
+      "created_at": "2015-04-27T07:43:05Z",
+      "is_admin": false,
+      "first_name": "Sandra",
+      "last_name": "Hindskog",
+      "timezone": "Amsterdam",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": true,
+      "updated_at": "2015-11-20T13:10:28Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 985214,
+      "email": "sara@rebel-and-bird.com",
+      "created_at": "2015-04-27T07:39:22Z",
+      "is_admin": true,
+      "first_name": "Sara",
+      "last_name": "Cederberg Glaser",
+      "timezone": "Amsterdam",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": true,
+      "updated_at": "2015-11-23T14:57:33Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 1146327,
+      "email": "siri@rebel-and-bird.com",
+      "created_at": "2015-11-17T08:24:43Z",
+      "is_admin": true,
+      "first_name": "Siri",
+      "last_name": "Matsdotter Berggren",
+      "timezone": "Stockholm",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": false,
+      "updated_at": "2015-11-17T15:17:48Z",
+      "cost_rate": null
+    }
+  },
+  {
+    "user": {
+      "id": 985215,
+      "email": "stefan@rebel-and-bird.com",
+      "created_at": "2015-04-27T07:40:29Z",
+      "is_admin": true,
+      "first_name": "Stefan",
+      "last_name": "Pettersson",
+      "timezone": "Stockholm",
+      "is_contractor": false,
+      "telephone": "",
+      "is_active": true,
+      "has_access_to_all_future_projects": false,
+      "default_hourly_rate": 0,
+      "department": "",
+      "wants_newsletter": false,
+      "updated_at": "2015-11-24T21:21:38Z",
+      "cost_rate": null
+    }
+  }
+]

@@ -4,6 +4,8 @@
 require("dotenv").load({silent: true});
 var _ = require("lodash");
 
+var people = require("./lib/people");
+
 // moment
 var moment = require("moment");
 moment.locale("sv");
@@ -66,15 +68,10 @@ function initWeekObject() {
 }
 
 var week = initWeekObject();
-var peopleLookup = {};
 
 peopleList({})
-  .then(function(people) {
-    // convert people list to object for lookup by id
-    peopleLookup = people.reduce(function(obj, person) {
-      obj[person.user.id] = person.user;
-      return obj;
-    }, {});
+  .then(function(data) {
+    people.init(data);
 
     return timeEntriesByProject(reportOptions);
   })
@@ -106,7 +103,7 @@ peopleList({})
     // convert into array for csv
     var csvData = Object.keys(p).map(function(user_id) {
       // get first name for person who did entry
-      p[user_id].name = peopleLookup[user_id].first_name;
+      p[user_id].name = people.get(user_id).first_name;
       p[user_id].user_id = user_id;
       return p[user_id];
     });
