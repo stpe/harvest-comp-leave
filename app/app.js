@@ -5,6 +5,7 @@ require("dotenv").load({silent: true});
 var _ = require("lodash");
 
 var people = require("./lib/people");
+var weekObj = require("./lib/week");
 
 // moment
 var moment = require("moment");
@@ -50,25 +51,6 @@ var reportOptions = {
 
 console.log(`Period: ${reportOptions.from} - ${reportOptions.to}.`);
 
-// populate week object with week numbers in requested date range
-function initWeekObject() {
-  var week = {};
-
-  var d = moment(reportOptions.from, "YYYY-MM-DD");
-  var endWeek = moment(reportOptions.to, "YYYY-MM-DD");
-
-  week[d.week()] = {};
-
-  while(!d.isAfter(endWeek)) {
-    d.add(1, "week");
-    week[d.week()] = {};
-  }
-
-  return week;
-}
-
-var week = initWeekObject();
-
 peopleList({})
   .then(function(data) {
     people.init(data);
@@ -76,6 +58,8 @@ peopleList({})
     return timeEntriesByProject(reportOptions);
   })
   .then(function(data) {
+    var week = weekObj.initWeekObject();
+
     data.filter(entry => entry.day_entry.task_id == TASK_ID_COMP_LEAVE)
       .map(function(entry) {
         entry = entry.day_entry;
