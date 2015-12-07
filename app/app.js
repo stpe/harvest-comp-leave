@@ -1,4 +1,4 @@
-/* jshint node: true, esnext: true */
+/* eslint-env es6 */
 "use strict";
 
 require("dotenv").load({silent: true});
