@@ -5,8 +5,7 @@
   "main": "app/app.js",
   "scripts": {
     "start": "node app/app.js",
-    "test": "mocha test",
-    "pretest": "eslint ."
+    "test": "mocha test && eslint ."
   },
   "repository": {
     "type": "git",
