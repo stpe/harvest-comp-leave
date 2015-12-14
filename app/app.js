@@ -63,7 +63,7 @@ peopleList({})
     var options = {
       fields: [
         {
-          name: "user_id",
+          name: "userId",
           label: "User ID"
         },
         {
