@@ -2,9 +2,10 @@
 "use strict";
 
 require("dotenv").load({silent: true});
-var _ = require("lodash");
 
 var people = require("./lib/people");
+var compLeave = require("./lib/compleave");
+
 var weekObj = require("./lib/week");
 
 // moment
@@ -37,17 +38,16 @@ var s3 = knox.createClient({
   region: process.env.S3_REGION
 });
 
-const TASK_ID_COMP_LEAVE = process.env.TASK_ID_COMP_LEAVE;
-const PROJECT_ID_INTERNAL = process.env.PROJECT_ID_INTERNAL;
-
-console.log("Project ID: " + TASK_ID_COMP_LEAVE);
-console.log("Task ID: " + PROJECT_ID_INTERNAL);
+console.log("Project ID: " + process.env.TASK_ID_COMP_LEAVE);
+console.log("Task ID: " + process.env.PROJECT_ID_INTERNAL);
 
 var reportOptions = {
-  project_id: PROJECT_ID_INTERNAL,
-  from: moment().subtract(process.env.NUMBER_OF_WEEKS, "weeks").startOf("week").format("YYYYMMDD"),
-  to: moment().endOf("week").format("YYYYMMDD")
+  "project_id": process.env.PROJECT_ID_INTERNAL,
+  "from": moment().subtract(process.env.NUMBER_OF_WEEKS, "weeks").startOf("week").format("YYYYMMDD"),
+  "to": moment().endOf("week").format("YYYYMMDD")
 };
+
+var week = weekObj.initWeekObject(reportOptions);
 
 console.log(`Period: ${reportOptions.from} - ${reportOptions.to}.`);
 
@@ -58,44 +58,7 @@ peopleList({})
     return timeEntriesByProject(reportOptions);
   })
   .then(function(data) {
-    var week = weekObj.initWeekObject();
-
-    data.filter(entry => entry.day_entry.task_id == TASK_ID_COMP_LEAVE)
-      .map(function(entry) {
-        entry = entry.day_entry;
-
-        // calculate week nr for entry
-        entry.week_nr = moment(entry.spent_at, "YYYY-MM-DD").week();
-
-        return entry;
-      })
-      .forEach(function(entry) {
-        // sum hours per week and per user
-        var hours = _.get(week, [entry.week_nr, entry.user_id], 0);
-        _.set(week, [entry.week_nr, entry.user_id], hours + parseInt(entry.hours));
-      });
-
-    // map into per person objects
-    var p = {};
-    Object.keys(week).forEach(function(week_nr) {
-      Object.keys(week[week_nr]).forEach(function(user_id) {
-        if (!p[user_id]) p[user_id] = {};
-        p[user_id][week_nr] = week[week_nr][user_id];
-      });
-    });
-
-    // convert into array for csv
-    var csvData = Object.keys(p).map(function(user_id) {
-      // get first name for person who did entry
-      p[user_id].name = people.get(user_id).first_name;
-      p[user_id].user_id = user_id;
-      return p[user_id];
-    });
-
-    // sort by name
-    csvData.sort(function(a, b) {
-      return a.name.localeCompare(b.name);
-    });
+    var csvData = compLeave.getPersonArray(data, people, reportOptions);
 
     var options = {
       fields: [
@@ -111,19 +74,16 @@ peopleList({})
       ]};
 
     // dynamic header values by weeks in period
-    Object.keys(week).forEach(function(week_nr) {
+    Object.keys(week).forEach(function(weekNr) {
       options.fields.push({
-        name: week_nr,
-        label: week_nr
+        name: weekNr,
+        label: weekNr
       });
     });
 
     jsoncsv.csvBuffered(csvData, options, function(err, csv) {
-      if (err) {
-        return console.error(err);
-      }
+      if (err) return console.error(err);
 
-      console.log("-- CSV: --");
       console.log(csv);
 
       if (!process.env.DEVELOPMENT) {

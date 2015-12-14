@@ -1,3 +1,5 @@
+"use strict";
+
 var people = {};
 
 var lookup = {};
@@ -10,8 +12,8 @@ people.init = function(data) {
   }, {});
 };
 
-people.get = function(user_id) {
-  return lookup[user_id];
+people.get = function(userId) {
+  return lookup[userId];
 };
 
 module.exports = people;

@@ -1,7 +1,13 @@
-var week = {};
+"use strict";
+
+// moment
+var moment = require("moment");
+moment.locale("sv");
+
+var weekObj = {};
 
 // populate week object with week numbers in requested date range
-week.initWeekObject = function() {
+weekObj.initWeekObject = function(reportOptions) {
   var week = {};
 
   var d = moment(reportOptions.from, "YYYY-MM-DD");
@@ -17,4 +23,4 @@ week.initWeekObject = function() {
   return week;
 };
 
-module.exports = week;
+module.exports = weekObj;
