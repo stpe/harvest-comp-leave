@@ -11,7 +11,7 @@ var weekObj = require("./lib/week");
 var moment = require("moment");
 moment.locale("sv");
 
-var jsoncsv = require('json-csv');
+var jsoncsv = require("json-csv");
 
 // harvest
 var Harvest = require("harvest"),
@@ -98,14 +98,14 @@ peopleList({})
     });
 
     var options = {
-      fields : [
+      fields: [
         {
-          name: 'user_id',
-          label: 'User ID'
+          name: "user_id",
+          label: "User ID"
         },
         {
-          name: 'name',
-          label: 'Name',
+          name: "name",
+          label: "Name",
           quoted: true
         }
       ]};
@@ -126,18 +126,21 @@ peopleList({})
       console.log("-- CSV: --");
       console.log(csv);
 
-      var buffer = new Buffer(csv);
-      var headers = { 'Content-Type': 'text/plain' };
-      var reply = "";
-      s3.putBuffer(buffer, '/harvest-comp-leave.csv', headers, function(err, res) {
-        if (err) return console.error(err);
+      if (!process.env.DEVELOPMENT) {
+        var buffer = new Buffer(csv);
+        var headers = { "Content-Type": "text/plain" };
+        var reply = "";
+        s3.putBuffer(buffer, "/harvest-comp-leave.csv", headers, function(s3err, res) {
+          if (s3err) return console.error(s3err);
 
-        console.log("Response HTTP Status", res.statusCode);
-        res.on('data', chunk => reply += chunk);
-        res.on('end', chunk => {
-          console.log(reply);
-          process.exit();
+          console.log("Response HTTP Status", res.statusCode);
+          res.on("data", chunk => reply += chunk);
+          res.on("end", () => {
+            console.log(reply);
+            process.exit(); // eslint-disable-line no-process-exit
+          });
         });
-      });
+      }
+
     });
   });
