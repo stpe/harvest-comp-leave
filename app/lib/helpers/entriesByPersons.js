@@ -26,12 +26,20 @@ helpers.convertTimeEntriesIntoByPerson = function(data, reportOptions) {
       _.set(week, [entry.week_nr, entry.user_id], hours + parseInt(entry.hours));
     });
 
+  // exclude these users from the report
+  var ignorePeople = [];
+  if (process.env.EXCLUDE_USER_ID) {
+    ignorePeople = process.env.EXCLUDE_USER_ID.split(",");
+  }
+
   // map into per person objects
   var p = {};
   Object.keys(week).forEach(function(weekNr) {
     Object.keys(week[weekNr]).forEach(function(userId) {
-      if (!p[userId]) p[userId] = {};
-      p[userId][weekNr] = week[weekNr][userId];
+      if (ignorePeople.indexOf(userId) == -1) {
+        if (!p[userId]) p[userId] = {};
+        p[userId][weekNr] = week[weekNr][userId];
+      }
     });
   });
 
